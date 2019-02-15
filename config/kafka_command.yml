@@ -1,0 +1,11 @@
+development:
+  clusters:
+    <%= ENV['CLUSTER_NAME'] %>:
+      seed_brokers: <%= ENV['SEED_BROKERS'] %>
+      description: <%= ENV['CLUSTER_DESCRIPTION'] || "No Description" %>
+    <% (2..50).each do |n| %>
+    <% next unless ENV["CLUSTER_NAME_#{n}"].present? && ENV["SEED_BROKERS_#{n}"].present? %>
+    <%= ENV["CLUSTER_NAME_#{n}"] %>:
+      seed_brokers: <%= ENV["SEED_BROKERS_#{n}"] %>
+      description: <%= ENV["CLUSTER_DESCRIPTION_#{n}"] || "No Description" %>
+    <% end %>
