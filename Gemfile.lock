@@ -1,3 +1,11 @@
+PATH
+  remote: /home/jdougher/kafka_command
+  specs:
+    kafka_command (0.0.2)
+      rails (>= 4)
+      rails-ujs
+      ruby-kafka (> 0.6.3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -54,10 +62,6 @@ GEM
       activesupport (>= 4.2.0)
     i18n (1.5.3)
       concurrent-ruby (~> 1.0)
-    kafka_command (0.0.2)
-      rails (>= 4)
-      rails-ujs
-      ruby-kafka (> 0.6.3)
     loofah (2.2.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -142,7 +146,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  kafka_command
+  kafka_command!
   puma (~> 3.11)
   rails (~> 5.2.2)
   sass-rails (~> 5.0)

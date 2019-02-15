@@ -1,6 +1,6 @@
-development:
+production:
   clusters:
-    <%= ENV['CLUSTER_NAME'] %>:
+    <%= ENV['CLUSTER_NAME'] || 'Production' %>:
       seed_brokers: <%= ENV['SEED_BROKERS'] %>
       description: <%= ENV['CLUSTER_DESCRIPTION'] || "No Description" %>
     <% (2..50).each do |n| %>
